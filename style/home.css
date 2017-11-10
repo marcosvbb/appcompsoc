@@ -1,0 +1,15 @@
+.demo-card-square.mdl-card {
+    width: 310px;
+    height: 310px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .demo-card-square > .mdl-card__title {
+    color: #fff;
+    background:
+      url('https://getmdl.io/assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+  }
+  .principal{
+    padding:5px;
+
+  }
