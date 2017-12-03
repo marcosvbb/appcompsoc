@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="style/font-google-design.css" />
-		<link rel="stylesheet" href="style/material.indigo-pink.min.css" />
-		<script defer src="script/material-design.min.js"></script>
-		<link rel="stylesheet" href="style/main.css" />
-	</head>
 
-	<body>
-		<!-- APP PAGE-->
-		<!-- Always shows a header, even in smaller screens. -->
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<header class="mdl-layout__header">
-				<div class="mdl-layout__header-row">
-					<!-- Title -->
-					<span class="mdl-layout-title">AppNome</span>
-					<!-- Add spacer, to align navigation to the right -->
-					<div class="mdl-layout-spacer"></div>
-				</div>
-			</header>
-  
-			<div class="mdl-layout__drawer">
-				<span class="mdl-layout-title">AppNome</span>
-				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="home.html" target="tela"><img class="img-nav" src="images/icon-nav.png" />Início</a>
-					<a class="mdl-navigation__link" href="teste.html"> <img class="img-nav" src="images/icon-nav.png" />Encontre seu calouro/veterano</a>
-					<a class="mdl-navigation__link" href="" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Chat</a>
-					<a class="mdl-navigation__link" href="novoPerfil.html" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Perfil</a>
-					<a class="mdl-navigation__link" href="" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Configurações</a>
-					<a class="logout mdl-navigation__link" href=""> <img class="img-nav" src="images/icon-nav.png" />Sair</a>
-	     
-				</nav>
-			</div>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/font-google-design.css" />
+    <link rel="stylesheet" href="style/material.indigo-pink.min.css" />
+    <script defer src="script/material-design.min.js"></script>
+    <link rel="stylesheet" href="style/main.css" />
+</head>
 
-			<main class="mdl-layout__content">
-				<div class="page-content">
-				<!-- Your content goes here -->
-				<iframe src="home.html" class="tela-principal" name="tela"></iframe>
-				</div>
-			</main>
-		</div>
+<body>
+    <!-- APP PAGE-->
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">AppNome</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </header>
 
-		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-		<!--tag firebase-->
-		<script src="script/jquery-3.2.1.min.js.js"></script>
-		<script src="script/main.js"></script>
-	</body>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">AppNome</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="teste.html" target="tela"><img class="img-nav" src="images/icon-nav.png" />Encontre seu calouro/veterano</a>
+                
+                <a class="mdl-navigation__link" href="" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Chat</a>
+                <a class="mdl-navigation__link" href="novoPerfil.html" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Perfil</a>
+                <a class="mdl-navigation__link" href="" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Configurações</a>
+                <a class="logout mdl-navigation__link" href=""> <img class="img-nav" src="images/icon-nav.png" />Sair</a>
+
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                <iframe src="teste.html" class="tela-principal" name="tela"></iframe>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    //tag fire
+    <script src="script/jquery-3.2.1.min.js.js"></script>
+    <script src="script/main.js"></script>
+</body>
+
 </html>

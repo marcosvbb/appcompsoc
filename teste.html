@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<meta charset="utf-8" />
-		
-		<link rel="stylesheet" href="style/teste.css" />
-	</head>
 
-	<body>
-		<!--DIV BEM-VINDO-->
-        <div class="teste-secao" id="teste-bem-vindo">
-            <div class="teste-voltar"> <img class="voltar" src="images/teste-voltar.png"></div>
-            <div class="teste-texto">
-                OLÁ! Responda as perguntas do nosso teste pra encontrarmos um <span id="testeCV">{{CALOURO}}</span> massa pra
-                você encher o saco!
-            </div>
-            <div class="teste-botao" id="teste-iniciar">
-                Iniciar
-            </div>
-        
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="style/teste.css" />
+</head>
+
+<body>
+    <!--DIV BEM-VINDO-->
+    <div class="teste-secao" id="teste-bem-vindo">
+
+        <div class="teste-texto">
+            OLÁ! Responda as perguntas do nosso teste pra encontrarmos um <span id="cal-vet">{{CALOURO}}</span> massa pra você encher o saco!
         </div>
-        <!--DIV GENERO-SERIE-->
-        <div class="teste-secao" id="teste-genero-serie">
-            <div class="teste-texto teste-texto-pergunta">
-                Você, escolhendo um seriado, vai para seção de
-            </div>
-               <div class="teste-opcoes"> 
-                    <img class="teste-opcao serie" id="serie-sitcom" src="./images/poster-serie-1.jpg" value="valor" />
-                   <img class="teste-opcao serie" id="serie-drama"  src="./images/poster-serie-1.jpg" value="valor2"/><br />
-                   <img class="teste-opcao serie" id="serie-suspense" src="./images/poster-serie-1.jpg" value="valor3"/>
-                   <img class="teste-opcao serie" id="serie-nao" src="./images/poster-serie-1.jpg" value="valor4"/><br />
-                </div>
+        <div class="teste-botao" id="teste-iniciar">
+            Iniciar
         </div>
-                <!--DIV MATERIA-ESCOLA-->
-        <div class="teste-secao" id="teste-materia-escola">
-            <div class="teste-texto teste-texto-pergunta">
-                Na escola, você era louco por 
-            </div>
-               <div class="teste-opcoes"> 
-                    <img class="teste-opcao materia" id="materia-matematica" src="./images/poster-serie-1.jpg" value="valor"/>
-                   <img class="teste-opcao materia" id="materia-linguagens" src="./images/poster-serie-1.jpg" value="valor1"/><br />
-                   <img class="teste-opcao materia" id="materia-natureza" src="./images/poster-serie-1.jpg" value="valor2"/>
-                   <img class="teste-opcao materia" id="materia-nao" src="./images/poster-serie-1.jpg" value="valor3"/><br />
-                </div> 
+
+    </div>
+    <!--DIV GENERO-SERIE-->
+    <div class="teste-secao" id="teste-genero-serie">
+        <div class="teste-texto teste-texto-pergunta">
+            Você, escolhendo um seriado, vai para seção de
         </div>
-        <!-- DIV AGUARDE-->
-        <div class="teste-secao" id="teste-aguarde">
-            <div class="teste-voltar"> <img class="voltar" src="images/teste-voltar.png"></div>
-            <div class="teste-texto">
-                Pronto! Aguarde que nossa moderação vai selecionar o {{CALOURO}} que mais tem a ver com você!
-            </div>
-            
-        
+        <div class="teste-opcoes">
+            <img class="teste-opcao serie" id="serie-sitcom" src="./images/poster-serie-1.jpg" value="valor" />
+            <img class="teste-opcao serie" id="serie-drama" src="./images/poster-serie-1.jpg" value="valor2" />
+            <br />
+            <img class="teste-opcao serie" id="serie-suspense" src="./images/poster-serie-1.jpg" value="valor3" />
+            <img class="teste-opcao serie" id="serie-nao" src="./images/poster-serie-1.jpg" value="valor4" />
+            <br />
         </div>
-		
-		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-		<!--tag firebase-->
-		<script src="script/jquery-3.2.1.min.js.js"></script>
-		<script src="script/teste.js"></script>
-	</body>
+    </div>
+    <!--DIV MATERIA-ESCOLA-->
+    <div class="teste-secao" id="teste-materia-escola">
+        <div class="teste-texto teste-texto-pergunta">
+            Na escola, você era louco por
+        </div>
+        <div class="teste-opcoes">
+            <img class="teste-opcao materia" id="materia-matematica" src="./images/poster-serie-1.jpg" value="valor" />
+            <img class="teste-opcao materia" id="materia-linguagens" src="./images/poster-serie-1.jpg" value="valor1" />
+            <br />
+            <img class="teste-opcao materia" id="materia-natureza" src="./images/poster-serie-1.jpg" value="valor2" />
+            <img class="teste-opcao materia" id="materia-nao" src="./images/poster-serie-1.jpg" value="valor3" />
+            <br />
+        </div>
+    </div>
+    <!-- DIV AGUARDE-->
+    <div class="teste-secao" id="teste-aguarde">
+
+        <div class="teste-texto">
+            Pronto! Aguarde que nossa moderação vai selecionar o <span class="cal-vet">{{CALOURO}}</span> que mais tem a ver com você!
+        </div>
+
+
+    </div>
+    <!-- DIV MATCH-->
+    <div class="teste-secao" id="teste-match">
+
+        <div class="teste-texto">
+            O seu <span class="cal-vet">{{CALOURO}}</span> é <span class="nome-match">{{NOME}}</span>! Veja o que possuem em comum no em <span class="perfil">{{PERFIL}}</span>.
+        </div>
+
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    //tag fire
+    <script src="script/jquery-3.2.1.min.js.js"></script>
+    <script src="script/teste.js"></script>
+</body>
+
 </html>

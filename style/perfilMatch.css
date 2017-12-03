@@ -1,0 +1,101 @@
+.principal_perfil {
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  top: 56px;
+}
+
+.perfil-nome {
+  font-size: 30px;
+  width: 300px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.mdl-card__supporting-text {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+}
+
+.perfil-section {
+  width: 100%;
+  min-height: 35px;
+  padding: 10px;
+}
+
+.perfil-texto-section {
+  margin-left: 10px;
+  position: relative;
+  top: 6px;
+  font-style: italic;
+  color: black;
+  text-align: justify;
+}
+
+.perfil-atributo-div {
+  border-top: 1px solid #777777;
+  background-color: white;
+}
+
+.perfil-atributo {
+  color: #AAAAAA;
+}
+
+.perfil-valor-div {
+  border-top: 1px solid #D4D4D4;
+  border-bottom: 1px solid #D4D4D4;
+  background-color: #E0DFDF;
+}
+
+.perfil-bio {
+  text-align: justify;
+  padding: 8px;
+  border: 2px solid #E0DFDF;
+  border-radius: 5px;
+  font-size: 115%;
+  margin-bottom: 16px;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  border-spacing: 10px 10px;
+}
+
+.perfil-detalhes {
+  background-color: white;
+  color: black;
+  border: 2px solid #b7b7b7;
+  border-radius: 12px;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.demo-card-image.mdl-card {
+  width: 128px;
+  height: 128px;
+  background: url('imagem_perfil_ex.jpg') center / cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.demo-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.demo-card-image__filename {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+body,
+html {
+  height: 100%;
+}

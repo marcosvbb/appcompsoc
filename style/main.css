@@ -47,3 +47,10 @@ html,.page-content,main{
   body {
 	min-height: 100%;
   }
+.mdl-layout__header{
+    background-color: #4b0082;
+    box-shadow: none;
+}
+body{
+    background-color: #4b0082;
+}

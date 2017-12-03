@@ -13,7 +13,7 @@ body,html{
 }
 body{
     /*cores*/
-    background-color: aquamarine;
+   
 }
 .teste-secao{
     height: 100%;
@@ -47,7 +47,7 @@ body{
     background-color: #385fa8;
 }
 #teste-bem-vindo{
-    
+    display: none;
 }
 .teste-texto-pergunta{
     font-size: 30px;
@@ -95,11 +95,9 @@ body{
     
 }
 }
-
-.teste-voltar{
-    margin-left: 8px;
-    padding-top: 5px;
-}
 #teste-aguarde{
+    display: none;
+}
+#teste-match{
     display: none;
 }

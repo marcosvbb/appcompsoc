@@ -1,73 +1,112 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="style/font-google-design.css" />
-		<link rel="stylesheet" href="style/material.indigo-pink.min.css" />
-		<script defer src="script/material-design.min.js"></script>
-		<link rel="stylesheet" href="style/index.css" />
-	</head>
 
-	<body>
-		<!-- DIV LOGIN -->
-		<div class="login-page">
-			<!-- loader -->
-			<div class=" page-loader mdl-spinner mdl-js-spinner is-active"></div>
-				<!-- DIV LOGIN-CARD -->
-				<div class="login-card">
-					<img class="logo-login" src="images/logo-login.png" />
-					<div class="form-login">
-					
-						<p><input class="input-login login-email" type="text" name="user" placeholder="Email..." /></p>
-						<p><input class="input-login login-pass" type="password" name="password" placeholder="Senha..." /></p>
-                        <p><button class="button button-login" name="send">Enviar</button><div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div></p>
-						<p class="forgot-pass">Esqueci minha senha</p>
-						<p class="no-acc">Criar minha conta</p>
-						<i><p class="error-msg"></p></i>
-					</div>
-				</div>
-				<!-- DIV NOVA SENHA-->
-				<div class="new-pass-card">
-					
-					<div class="form-new-pass form-login">
-					<img class="logo-login" src="images/logo-login.png" />
-						<p><input class="input-new-pass-email" type="text" name="user" placeholder="Email..." /></p>
-						<p><button class="button button-new-pass" name="new-pass" />Redefinir Senha</button><div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div></p>
-						
-						<p class="login-card-link login-link-new-pass"><u>Login</u></p>
-						<i><p class="error-msg"></p></i>
-					</div>
-				</div>
-				<!-- DIV NOVA CONTA-->
-				<div class="new-account-card">
-					<img class="logo-login" src="images/logo-login.png" />
-					<div class="form-new-account form-login">
-						<p><input class="input-login input-email-new-acc" type="email" name="email" placeholder="Email..." /></p>
-						<p><input class="input-login input-pass-new-acc" type="password" name="password" placeholder="Senha..." /></p>
-						<p><input class="input-login input-pass-again-new-acc" type="password" name="password-again" placeholder="Senha novamente..." /></p>
-						<p><button class="button button-new-acc" name="cadastrar" />Criar Conta</button><div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div></p>
-						<p class="no-acc to-login-card">Login</p>	
-					</div>
-				</div>
-                <!-- DIV PRIMEIRO ACESSO FORM-->
-				<div class="first-acess-card">
-					<div class="form-new-account form-login form-first-acess">
-						<p><input class="input-login input-name-first-acess" type="text" name="nome" placeholder=" Nome..." /></p>
-						<p><input class="input-login input-cpf-first-acess" type="text" name="cpf" placeholder="  CPF..." /></p>
-						<p><input class="input-login input-dre-first-acess" type="text" name="dre" placeholder=" DRE..." /></p>
-                        <p><input class="input-login input-course-first-acess" type="text" name="curso" placeholder=" Curso..." /></p>
-                        <p><input class="input-login input-periodo-first-acess" type="text" name="periodo" placeholder=" Nº do período..." /></p>
-                        <p><input class="input-login input-escola-first-acess" type="text" name="escola" placeholder=" Escola em que fez o ensino médio..." /></p>
-						<p><button class="button button-proximo-first-acess" name="proximo" />Próximo</button><div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div></p>
-					</div>
-				</div>
-			</div>
-		</div>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style/font-google-design.css" />
+    <link rel="stylesheet" href="style/material.indigo-pink.min.css" />
+    <script defer src="script/material-design.min.js"></script>
+    <link rel="stylesheet" href="style/index.css" />
+</head>
 
-		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-		<!-- tag firebase-->
-		<script src="script/jquery-3.2.1.min.js.js"></script>
-		<script src="script/index.js"></script>
-	</body>
+<body>
+    <!-- DIV LOGIN -->
+    <div class="login-page">
+        <!-- loader -->
+        <div class=" page-loader mdl-spinner mdl-js-spinner is-active"></div>
+        <!-- DIV LOGIN-CARD -->
+        <div class="login-card">
+            <img class="logo-login" src="images/logo-login.png" />
+            <div class="form-login">
+
+                <p>
+                    <input class="input-login login-email" type="text" name="user" placeholder="Email..." />
+                </p>
+                <p>
+                    <input class="input-login login-pass" type="password" name="password" placeholder="Senha..." />
+                </p>
+                <p>
+                    <button class="button button-login" name="send">Enviar</button>
+                    <div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div>
+                </p>
+                <p class="forgot-pass">Esqueci minha senha</p>
+                <p class="no-acc">Criar minha conta</p>
+                <i><p class="error-msg"></p></i>
+            </div>
+        </div>
+        <!-- DIV NOVA SENHA-->
+        <div class="new-pass-card">
+
+            <div class="form-new-pass form-login">
+                <img class="logo-login" src="images/logo-login.png" />
+                <p>
+                    <input class="input-new-pass-email" type="text" name="user" placeholder="Email..." />
+                </p>
+                <p>
+                    <button class="button button-new-pass" name="new-pass">Redefinir Senha</button>
+                    <div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div>
+                </p>
+
+                <p class="login-card-link login-link-new-pass"><u>Login</u>
+                </p>
+                <i><p class="error-msg"></p></i>
+            </div>
+        </div>
+        <!-- DIV NOVA CONTA-->
+        <div class="new-account-card">
+            <img class="logo-login" src="images/logo-login.png" />
+            <div class="form-new-account form-login">
+                <p>
+                    <input class="input-login input-email-new-acc" type="email" name="email" placeholder="Email..." />
+                </p>
+                <p>
+                    <input class="input-login input-pass-new-acc" type="password" name="password" placeholder="Senha..." />
+                </p>
+                <p>
+                    <input class="input-login input-pass-again-new-acc" type="password" name="password-again" placeholder="Senha novamente..." />
+                </p>
+                <p>
+                    <button class="button button-new-acc" name="cadastrar">Criar Conta</button>
+                    <div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div>
+                </p>
+                <p class="no-acc to-login-card">Login</p>
+            </div>
+        </div>
+        <!-- DIV PRIMEIRO ACESSO FORM-->
+        <div class="first-acess-card">
+            <div class="form-new-account form-login form-first-acess">
+                <p>
+                    <input class="input-login input-name-first-acess" type="text" name="nome" placeholder=" Nome..." />
+                </p>
+                <p>
+                    <input class="input-login input-cpf-first-acess" type="text" name="cpf" placeholder="  CPF..." />
+                </p>
+                <p>
+                    <input class="input-login input-dre-first-acess" type="text" name="dre" placeholder=" DRE..." />
+                </p>
+                <p>
+                    <input class="input-login input-course-first-acess" type="text" name="curso" placeholder=" Curso..." />
+                </p>
+                <p>
+                    <input class="input-login input-periodo-first-acess" type="text" name="periodo" placeholder=" Nº do período..." />
+                </p>
+                <p>
+                    <input class="input-login input-escola-first-acess" type="text" name="escola" placeholder=" Escola em que fez o ensino médio..." />
+                </p>
+                <p>
+                    <button class="button button-proximo-first-acess" name="proximo">Próximo</button>
+                    <div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    //tag fire
+    <script src="script/jquery-3.2.1.min.js.js"></script>
+    <script src="script/index.js"></script>
+</body>
+
 </html>
