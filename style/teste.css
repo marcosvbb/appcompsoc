@@ -13,7 +13,11 @@ body,html{
 }
 body{
     /*cores*/
+<<<<<<< HEAD
    
+=======
+    background-color: aquamarine;
+>>>>>>> c68063ce7b21b484543adbb8240c449ddab75079
 }
 .teste-secao{
     height: 100%;
@@ -47,7 +51,11 @@ body{
     background-color: #385fa8;
 }
 #teste-bem-vindo{
+<<<<<<< HEAD
     display: none;
+=======
+    
+>>>>>>> c68063ce7b21b484543adbb8240c449ddab75079
 }
 .teste-texto-pergunta{
     font-size: 30px;
@@ -95,9 +103,18 @@ body{
     
 }
 }
+<<<<<<< HEAD
 #teste-aguarde{
     display: none;
 }
 #teste-match{
+=======
+
+.teste-voltar{
+    margin-left: 8px;
+    padding-top: 5px;
+}
+#teste-aguarde{
+>>>>>>> c68063ce7b21b484543adbb8240c449ddab75079
     display: none;
 }
