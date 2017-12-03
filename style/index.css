@@ -10,23 +10,15 @@
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
+    
 }
-.mdl-layout-title{
-	text-align:center;
-	/*font-family:;*/
-}
-.img-nav{
-	width: 24px;
-	height: 24px;
-	padding-right: 15px;
-}
-.mdl-layout__header {
-	background-color: #C62828;
-	border-bottom-left-radius: 7px;
-	border-bottom-right-radius: 7px;
+body,html{
+    
+    height: 100%;
 }
 .login-page{
-	background-color: #C62828;
+    height: 100%;
+    background: url('bg.jpg') no-repeat center center;
 	border-radius: 7px;
 	position: fixed;
 	top: 0;
@@ -39,64 +31,79 @@
 	align-items: center;
 	-webkit-overflow-scrolling: touch;
   	overflow-y: scroll;
-	
 }
+
 .login-card,.new-pass-card,.new-account-card,.first-acess-card{
-	background-color: #C62828;
+	background-color: rgba(255, 255, 255, 0.9);
 	border-radius: 7px;
 	position: fixed;
-	width: 100%;
-	height:70%;
+    width: 290px;
+	height:80%;
 	z-index: 800;	
 	display:flex;
 	justify-content: center;
 	align-items: center;
 }
-
-.new-account-card{
-    overflow-y: scroll;
-	overflow-x: hidden;
-    height: 100%;
-    width: 263px;
+.new-pass-card{
+    display: none;
+}
+.login-card{
+   
     
 }
+
+.new-account-card{
+    /*overflow-y: scroll; */
+	overflow-x: hidden;
+  height: 80%;
+    display: none;
+    
+}
+
 .logo-login{
 	position: fixed;
 	margin-top: -150px;
 }
+
 .input-login,.input-new-pass-email{
-	
+    
 	border-radius:7px;
-	border: none;
-	font-size: 20px;
+	border: 1px solid rgba(33, 40, 51, 0.3);
+	font-size: 17px;
 	height: 30px;
 	margin-bottom:15px;
-	padding-bottom:4px;
-	padding-top:4px;
+	padding-bottom:6px;
+	padding-top:6px;
 	letter-spacing: 1px;
-	
+    width: 250px;
 }
+
 .form-login,.form-new-pass,.form-new-account{
 	margin-top: 40px;
 	height: 180px;
 }
+
 .button{
 	position: relative;
     border-radius: 7px;
 	border: none;
-	padding: 4px;
+	padding: 6px;
 	font-size: 20px;
 	float: right;
+    background-color: rgb(66, 185, 112);
+    color: white;
 }
+
 .no-acc,.forgot-pass,.login-card-link{
 	position:absolute;
 	width: 160px;
     padding: 0;
 	font-weight: bold;
-	color: white;
+	color: rgba(33, 40, 51, 0.5);
 	letter-spacing: 0.5px;
 	height: 20px;
 }
+
 .no-acc,.login-card-link{
 	margin-top: 80px;
     margin-left: auto;
@@ -105,35 +112,34 @@
     text-align: center;
     width: 250px;
 }
+.to-login-card{
+    margin-left:44px;
+    margin-top: 14px;
+    width: 50px;
+}
 .forgot-pass{
 	margin-top: 9px;
 	float: left;
 	
 }
+
 .error-msg{
 	color:#ffffff;
 	margin-top: 54px;
 	width: 243px;
 	text-align: center;
 }
+
 .login-progress{
 	display: none;
 	float: right;
 }
-.mdl-layout-title{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 84%;
-}
+
 .first-acess-card{
 	top: -10px;
-	
+    display: none;
 }
-.tela-principal{
-	height: 100%;
-	width: 100%;
-}
+
 html,.page-content,main{
 	height: 100%;
   }

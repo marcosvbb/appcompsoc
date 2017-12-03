@@ -1,0 +1,105 @@
+@font-face{
+    font-family: sourceSansProBold;
+    src: url(../fonts/SourceSansPro-Bold.otf);
+    
+}
+@font-face{
+    font-family: latoRegular;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+body,html{
+    height: 100%;
+    margin: 0;
+}
+body{
+    /*cores*/
+    background-color: aquamarine;
+}
+.teste-secao{
+    height: 100%;
+}
+.teste-texto{
+    width: 300px;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+   padding-top: 8.8%;
+    font-family: sourceSansProBold;
+    font-size: 40px;
+    line-height: 55px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px rgba(230, 230, 230, 0.84);
+}
+.teste-botao{
+    background-color: #4071cb;
+    padding: 7px;
+    width: 82px;
+    border-radius: 3px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: latoRegular;
+    font-size: 30px;
+    color: #ffffff;
+}
+.teste-botao:active { 
+    background-color: #385fa8;
+}
+#teste-bem-vindo{
+    
+}
+.teste-texto-pergunta{
+    font-size: 30px;
+}
+
+.teste-opcao{
+    width: 140px;
+    margin: 4px;
+    margin-top: 6px;
+    
+    height: 50%;
+    
+}
+.teste-opcoes{
+    margin-left: auto;
+        margin-right: auto;
+     width:300px;
+}
+#teste-genero-serie{
+    display: none;
+}
+#teste-materia-escola{
+    display: none;
+
+}
+
+@media screen and (width: 320px) {
+    .teste-opcao{
+    width:120px;
+    margin: 4px;
+    margin-top: 6px;
+    
+    height: 50%;
+   
+    
+}
+    .teste-opcoes{
+        width:260px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .teste-texto{
+    
+   padding-top: 0;
+    
+}
+}
+
+.teste-voltar{
+    margin-left: 8px;
+    padding-top: 5px;
+}
+#teste-aguarde{
+    display: none;
+}
