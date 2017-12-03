@@ -66,7 +66,7 @@ $(function() {
                     }
                 }); 
             }).catch(function(error) {
-    			$('.error-msg').show().text(error.message);
+    			$('.error-msg').show().text(error.message).css('color', 'black');
     			$('.login-progress').hide();
     			$('.button-login').show();
     		});	
