@@ -1,0 +1,49 @@
+*:focus, *:active{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+* {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.mdl-layout-title{
+	text-align:center;
+	/*font-family:;*/
+}
+
+.img-nav{
+	width: 24px;
+	height: 24px;
+	padding-right: 15px;
+}
+
+.mdl-layout__header {
+	background-color: #C62828;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+.mdl-layout-title{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 84%;
+}
+
+.tela-principal{
+	height: 100%;
+	width: 100%;
+}
+
+html,.page-content,main{
+	height: 100%;
+  }
+  body {
+	min-height: 100%;
+  }

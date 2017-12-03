@@ -1,3 +1,4 @@
+$(function() {
 $('.login-card').show();
 $('.login-page').show();
 $('.first-acess-card').hide();
@@ -6,7 +7,7 @@ $('.new-pass-card').hide();
 //referencia ao database
 var database = firebase.database().ref();
   
-// checa se o usuario esta logado 
+//Checa se o usuario esta logado 
 
 firebase.auth().onAuthStateChanged(function(user) {
     //referencia para pegar email no database
@@ -15,15 +16,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     //funcao para pegar dado no database
     firebaseRef.on('value', function(datasnapshot){
         
-        
-    
         //se email verficado e valor do dado (datasnapshot, que é o que está em email no user.uid) existirem
         if(user.emailVerified && datasnapshot.val()) {
             // mostra a tela principal
-            $('.first-acess-card').hide();
-            $('.new-pass-card').hide();
-            $('.login-page').hide();
-	        $('.login-card').hide();
+            $('.login-progress').hide();
+            alert(user.uid);
+            window.locaiton="main.html";
+            
 	        
             //caso so o email esteja verificado
         } else if (user.emailVerified) {
@@ -32,57 +31,55 @@ firebase.auth().onAuthStateChanged(function(user) {
             $('.first-acess-card').show();
 	        $('.login-card').hide();
 	        $('.new-pass-card').hide();
+            
        }
+    });
 });
-});
+
 //button login auth
 $('.button-login').on('click', function(e){
-	e.preventDefault();	
+
+    e.preventDefault();
 	var $userEmailLogin = $('.login-email').val(), $userPasswordLogin = $('.login-pass').val();
 	if ($userEmailLogin != '' && $userPasswordLogin != ''){
 		$('.login-progress').show();
 		$('.button-login').hide();
         //faz o login
+
 		firebase.auth().signInWithEmailAndPassword($userEmailLogin, $userPasswordLogin).then(function(user){
-            if (user.emailVerified) {
-                $('.login-page').show();
-	            $('.login-card').hide();
-	            $('.new-pass-card').hide();
-                $('.new-account-card').hide();
-            } else {
-                window.alert('Sua conta não foi verificada');
-                $('.login-progress').hide();
-                $('.button-login').show();
-  }
-            
+
+            var firebaseRef = firebase.database().ref().child('usuario').child(user.uid).child('emailUsuario');
+            firebaseRef.on('value', function(datasnapshot) {
+
+                if (user.emailVerified && datasnapshot.val()) {
+                    window.open('main.html', '_self');
+                } else if (user.emailVerified) {
+                    $('.login-page').fadeIn(100);
+                    $('.first-acess-card').fadeIn(100);
+                    $('.login-card').fadeOut(200);
+                    $('.new-pass-card').hide();
+                    $('.login-progress').hide();
+                } else {
+                    window.alert('Sua conta não foi verificada');
+                    $('.login-progress').hide();
+                    $('.button-login').show();
+                }
+            }); 
         }).catch(function(error) {
-			$('.error-msg').show().text(error.message);
+			$('.error-msg').show().text(error.message)
 			$('.login-progress').hide();
 			$('.button-login').show();
 		});	
 	}
-    
+});
 
-});
-//logout button
-$('.logout').on('click',function(e){
-	firebase.auth().signOut().then(function() {
-		e.preventDefault();
-		$('.login-page').show().slideDown();
-		$('.login-card').show().slideDown();
-		$('.login-progress').hide();
-		$('.button-login').show();
-		$('.error-msg').show().text('');
-		$('.login-pass').val('');
-}, function(error) {
-        alert(error);
-});
-});
+
 //mostra forgot-pass-card
 $('.forgot-pass').on('click',function(){
-	$('.login-card').hide();
-	$('.new-pass-card').show();
+	$('.login-card').fadeOut(200);
+	$('.new-pass-card').fadeIn(100);
 });
+
 //botao resetar senha
 $('.button-new-pass').on('click',function(e){
 	e.preventDefault();
@@ -96,7 +93,7 @@ $('.button-new-pass').on('click',function(e){
 		});
 });
 
-// botao criar nova conta
+//botao criar nova conta
 $('.button-new-acc').on('click',function(e){
     e.preventDefault();
    var $email = $('.input-email-new-acc').val();
@@ -117,29 +114,31 @@ $('.button-new-acc').on('click',function(e){
                 window.alert(error.message);
             });
 
-        }else{
+        } else{
             window.alert("As senhas inseridas não conferem.");   
             $('.input-pass-again-new-acc').val('');
         }
-}
-    );
-//Botao login em login-link-card
-$('.login-link-new-pass').on('click',function(){
-    $('.login-card').show();
-    $('.new-pass-card').hide();
 });
+
+//Botao login em new-pass-card
+$('.login-link-new-pass').on('click',function(){
+    $('.login-card').fadeIn(100);
+    $('.new-pass-card').fadeOut(200);
+});
+
 //Botao nova conta em login-card
 $('.no-acc').on('click',function(){
-    $('.new-account-card').show();
-    $('.login-card').hide();
+    $('.new-account-card').fadeIn(100);
+    $('.login-card').fadeOut(200);
 });
-//Botao nova conta em login-card
+
+//Botao login em new-account-card
 $('.to-login-card').on('click',function(){
-    $('.login-card').show();
-    $('.new-account-card').hide();
-    
+    $('.login-card').fadeIn(100);
+    $('.new-account-card').fadeOut(200);
 });
-// gravação inicial de dados
+
+//Gravação inicial de dados
 
 $('.button-proximo-first-acess').on('click',function(e){
     e.preventDefault();
@@ -151,6 +150,7 @@ $('.button-proximo-first-acess').on('click',function(e){
     var periodo = $('.input-periodo-first-acess').val();
     var escola = $('.input-escola-first-acess').val();
     var email = $('.login-email').val();
+    var bio = "Olá, meu nome é " + nome + "."; 
     database.child("usuario").child(user.uid).child("emailUsuario").set(email);
     database.child("usuario").child(user.uid).child("nomeUsuario").set(nome);
     database.child("usuario").child(user.uid).child("cpfUsuario").set(cpf);
@@ -158,9 +158,12 @@ $('.button-proximo-first-acess').on('click',function(e){
     database.child("usuario").child(user.uid).child("cursoUsuario").set(curso);
     database.child("usuario").child(user.uid).child("periodoUsuario").set(periodo);
     database.child("usuario").child(user.uid).child("escolaUsuario").set(escola);
+    database.child("usuario").child(user.uid).child("bioUsuario").set(bio);
     $('.login-progress').show();
     $('.button-proximo-first-acess').hide();
-    
+    window.open('main.html', '_self');
+
    }); 
-  });
+});
+    });
 

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta	name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="style/font-google-design.css" />
 		<link rel="stylesheet" href="style/material.indigo-pink.min.css" />
 		<script defer src="script/material-design.min.js"></script>
 		<link rel="stylesheet" href="style/index.css" />
-		</head>
+	</head>
+
 	<body>
 		<!-- DIV LOGIN -->
 		<div class="login-page">
@@ -21,8 +22,8 @@
 						<p><input class="input-login login-email" type="text" name="user" placeholder="Email..." /></p>
 						<p><input class="input-login login-pass" type="password" name="password" placeholder="Senha..." /></p>
                         <p><button class="button button-login" name="send">Enviar</button><div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div></p>
-						<p class="forgot-pass"><u>Esqueci minha senha</u></p>
-						<p class="no-acc"><u>Criar minha conta</u></p>
+						<p class="forgot-pass">Esqueci minha senha</p>
+						<p class="no-acc">Criar minha conta</p>
 						<i><p class="error-msg"></p></i>
 					</div>
 				</div>
@@ -46,7 +47,7 @@
 						<p><input class="input-login input-pass-new-acc" type="password" name="password" placeholder="Senha..." /></p>
 						<p><input class="input-login input-pass-again-new-acc" type="password" name="password-again" placeholder="Senha novamente..." /></p>
 						<p><button class="button button-new-acc" name="cadastrar" />Criar Conta</button><div class=" login-progress mdl-spinner mdl-js-spinner is-active"></div></p>
-						<p class="no-acc to-login-card"><u>Login</u></p>	
+						<p class="no-acc to-login-card">Login</p>	
 					</div>
 				</div>
                 <!-- DIV PRIMEIRO ACESSO FORM-->
@@ -63,46 +64,10 @@
 				</div>
 			</div>
 		</div>
-		<!-- APP PAGE-->
-		<!-- Always shows a header, even in smaller screens. -->
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<header class="mdl-layout__header">
-				<div class="mdl-layout__header-row">
-					<!-- Title -->
-					<span class="mdl-layout-title">Calourei</span>
-					<!-- Add spacer, to align navigation to the right -->
-					<div class="mdl-layout-spacer"></div>
-				</div>
-			</header>
-  
-		<div class="mdl-layout__drawer">
-			<span class="mdl-layout-title">Calourei</span>
-			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="home.html" target="tela"><img class="img-nav" src="images/icon-nav.png" />Início</a>
-				<a class="mdl-navigation__link" href="" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Ache seu calouro/veterano</a>
-				<a class="mdl-navigation__link" href="" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Chat</a>
-				<a class="mdl-navigation__link" href="perfil.html" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Perfil</a>
-				<a class="mdl-navigation__link" href="" target="tela"> <img class="img-nav" src="images/icon-nav.png" />Configurações</a>
-				<a class="logout mdl-navigation__link" href=""> <img class="img-nav" src="images/icon-nav.png" />Sair</a>
-     
-			</nav>
-		</div>
-		<main class="mdl-layout__content">
-			<div class="page-content">
-			<!-- Your content goes here -->
-			<iframe src="home.html" class="tela-principal" name="tela"></iframe>
-			</div>
-		</main>
-		</div>
 
+		<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		<!-- tag firebase-->
 		<script src="script/jquery-3.2.1.min.js.js"></script>
-		
-        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
-        <!--script firebase-->
 		<script src="script/index.js"></script>
 	</body>
 </html>
